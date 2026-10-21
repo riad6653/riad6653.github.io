@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Paid product files — keep out of search results
+Disallow: /downloads/
+
+Sitemap: https://riad6653.github.io/sitemap.xml

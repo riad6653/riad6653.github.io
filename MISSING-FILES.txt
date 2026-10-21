@@ -1,0 +1,22 @@
+FILE STATUS — 22 Oct 2026
+=========================
+READY (integrated + tested):
+[x] index.html        (SEO landing + login gate, app.js-er sathe sync-tested)
+[x] styles.css        (apnar দেওয়া)
+[x] app.js            (apnar দেওয়া)
+[x] crypto-license.js (apnar দেওয়া)
+[x] offline-catalog.js(apnar দেওয়া)
+[x] assets/ (logo, favicon x4, og-cover)
+[x] robots.txt, sitemap.xml, 404.html, .nojekyll
+[x] .github/workflows/deploy-pages.yml (auto-deploy)
+[x] deploy-windows.bat / deploy-mac-linux.sh
+[x] DEPLOY-GUIDE-BN.md
+
+EKHONO BAKI (optional — na dile download button 404 dekhave):
+[ ] downloads/RC-Microstock-Extension-Pro.zip        (max 100MB)
+[ ] downloads/RC-Microstock-Pro-COMPLETE-PACKAGE.zip (max 100MB)
+
+DEPLOY-ER JONNO JI DORKAR:
+[ ] GitHub account (username: riad-chowdhury) — free
+[ ] Personal Access Token (repo + workflow scope) — amake din, ami baki sob kore debo
+[ ] (deploy-er por) Google Search Console verify — Google account diye 2 click
