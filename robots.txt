@@ -4,4 +4,4 @@ Allow: /
 # Paid product files — keep out of search results
 Disallow: /downloads/
 
-Sitemap: https://riad6653.github.io/sitemap.xml
+Sitemap: https://riad-chowdhury-pro.netlify.app/sitemap.xml
