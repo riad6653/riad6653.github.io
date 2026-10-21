@@ -1004,5 +1004,49 @@
   <script src="./crypto-license.js?v=3.4"></script>
   <script src="./offline-catalog.js?v=3.4"></script>
   <script src="./app.js?v=3.4"></script>
+
+  <!-- =====================================================================
+       RC DOWNLOAD GUARD — ZIP na thakle silent 404 er bodole
+       clear Bangla message + WhatsApp CTA dekhay
+       ===================================================================== -->
+  <script id="rc-download-guard">
+    (function () {
+      var ZIPS = ["downloads/RC-Microstock-Extension-Pro.zip", "downloads/RC-Microstock-Pro-COMPLETE-PACKAGE.zip"];
+      var missing = {};
+      function norm(h) { return String(h).replace(/^\.\//, "").split("?")[0]; }
+      function check() {
+        ZIPS.forEach(function (z) {
+          fetch("./" + z, { method: "HEAD" })
+            .then(function (r) { missing[z] = !r.ok; })
+            .catch(function () { missing[z] = true; });
+        });
+      }
+      function showPanel(file) {
+        var old = document.getElementById("rc-dl-missing");
+        if (old) old.remove();
+        var d = document.createElement("div");
+        d.id = "rc-dl-missing";
+        d.setAttribute("role", "alert");
+        d.style.cssText = "position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:600px;margin:0 auto;background:linear-gradient(160deg,#1c1f2b,#12141d);border:1px solid rgba(245,214,115,.5);border-radius:16px;padding:18px 20px;color:#f7f3ea;font-family:system-ui,'Noto Sans Bengali','Hind Siliguri',sans-serif;box-shadow:0 18px 50px rgba(0,0,0,.55)";
+        d.innerHTML =
+          '<div style="font-weight:800;color:#f5d673;margin-bottom:6px;font-size:15px;">📦 দুঃখিত — ফাইলটি এখনো সার্ভারে আপলোড করা হয়নি</div>' +
+          '<div style="font-size:13.5px;line-height:1.75;color:#b7b0a2;">এই মুহূর্তে <code style="color:#f2d2bd;">' + file.split("/").pop() + '</code> ফাইলটি সার্ভারে নেই, তাই ডাউনলোড শুরু হচ্ছে না। অ্যাডমিন ফাইলটি আপলোড করলেই বাটনটি কাজ করবে। জরুরি প্রয়োজনে WhatsApp-এ সরাসরি ফাইলটি চেয়ে নিন:</div>' +
+          '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;">' +
+          '<a href="https://wa.me/8801618674044?text=Assalamu%20Alaikum%20Riad%20Chowdhury%20Vai!%20Website%20theke%20ZIP%20file%20download%20kora%20jacche%20na,%20file%20ta%20pathiye%20din%20please." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:12px;background:linear-gradient(135deg,#22c55e,#0b7a3e);color:#fff;font-weight:700;font-size:13.5px;text-decoration:none;">💬 WhatsApp-এ ফাইলটি চান</a>' +
+          '<button type="button" id="rc-dl-missing-close" style="padding:11px 18px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.2);color:#f7f3ea;font-weight:600;font-size:13.5px;cursor:pointer;">ঠিক আছে, পরে চেষ্টা করব</button>' +
+          "</div>";
+        document.body.appendChild(d);
+        var c = document.getElementById("rc-dl-missing-close");
+        if (c) c.onclick = function () { d.remove(); };
+      }
+      document.addEventListener("click", function (e) {
+        var t = e.target && e.target.closest ? e.target.closest('a[href*="downloads/"]') : null;
+        if (!t) return;
+        if (missing[norm(t.getAttribute("href"))]) { e.preventDefault(); showPanel(norm(t.getAttribute("href"))); }
+      }, true);
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", check);
+      else check();
+    })();
+  </script>
 </body>
 </html>

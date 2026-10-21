@@ -5,7 +5,8 @@ Creative Fabrica ও Pngtree-এর লাইভ রিসার্চ, AI Promp
 Niche Score & 49 SEO Tags, Seasonal Event Calendar (24h auto-sync), Passive Income
 Calculator (USD/BDT), URL Inspector, Personal Tracker ও Chrome Extension।
 
-- **Live site:** https://riad-chowdhury.github.io/
+- **Live site (primary):** https://riad-chowdhury-pro.netlify.app/
+- **Mirror:** https://riad6653.github.io/
 - **Owner/Admin:** Riad Chowdhury • WhatsApp +880 1618-674044
 - **Deploy guide (বাংলা):** [`DEPLOY-GUIDE-BN.md`](DEPLOY-GUIDE-BN.md)
 - **One-click deploy:** `deploy-windows.bat` (Windows) / `deploy-mac-linux.sh` (Mac/Linux)

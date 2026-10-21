@@ -1,6 +1,13 @@
 # 🚀 RC Microstock Research Pro — FREE Hosting + Domain + Google Deploy Guide (বাংলা)
 
-**Target:** `https://riad-chowdhury.github.io/` — ০ টাকা খরচ, আপনার নাম domain-এ, Google-এ searchable।
+**LIVE NOW (০ টাকা):**
+- ⭐ Primary (name domain): **https://riad-chowdhury-pro.netlify.app/**
+- 🪞 Mirror/backup: **https://riad6653.github.io/**
+- Canonical (Google-কে যেটা দেখানো হয়): netlify primary URL
+- Owner: Riad Chowdhury • rjriadchowdhury2005@gmail.com
+
+> `riad-chowdhury` ও `riadchowdhury` subdomain Netlify+GitHub-এ অন্য কারো দখলে, তাই **riad-chowdhury-pro** নেওয়া হয়েছে।
+> পুরনো `Riad-Chowdhury` GitHub account-এর password ফিরে পেলে আমাকে বলবেন — সব `riad-chowdhury.github.io`-তে migrate করে দেবো।
 
 ---
 
